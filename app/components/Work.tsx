@@ -14,7 +14,6 @@ function ShowcaseTile({
     <li
       className="group relative aspect-square overflow-hidden border-r border-b border-gray-300"
     >
-      {/* Hover-Media */}
       <div className="absolute inset-0 z-0 opacity-100 md:opacity-0 transition-opacity duration-500 md:group-hover:opacity-100">
         {poster && (
           <Image
@@ -27,14 +26,10 @@ function ShowcaseTile({
         )}
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-black" />
       </div>
-
-      {/* Dot */}
       <span
         className="absolute bg-[#97CBD1] left-3 top-3 z-10 inline-block h-4 w-4 rounded-full ring-1 ring-white/50"
         aria-hidden
       />
-
-      {/* Content */}
       <div className="relative z-10 flex h-full flex-col justify-end p-5">
         <div className="text-white md:text-zinc-700 transition md:group-hover:text-white text-2xl font-semibold">
           {title}
@@ -43,8 +38,6 @@ function ShowcaseTile({
           {kicker}
         </div>
       </div>
-
-      {/* Subtiles Kanten-Highlight */}
       <div
         className="pointer-events-none absolute inset-0 opacity-100 md:opacity-0 transition-opacity duration-500 md:group-hover:opacity-100"
         style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08), 0 0 40px rgba(0,0,0,0.35)" }}
@@ -55,9 +48,7 @@ function ShowcaseTile({
 }
 
 function Work() {
-  // Mischgrid: echte Projekte + Schlüssel-Skills (mit Beispielen)
   const items = [
-    // — PROJECTS —
     {
       title: "Anomaly Watch",
       kicker: "Real-time anomaly detection with alerts to Teams (GCP/BigQuery).",
@@ -78,8 +69,6 @@ function Work() {
       kicker: "Real-time KPIs, error monitoring, and incidents for several stakeholders.",
       poster: "/work/dashboard.jpg",
     },
-
-    // — SKILLS IN ACTION —
     {
       title: "Data Engineering",
       kicker: "Scalable pipelines, warehouse design, and robust ETL/ELT processes.",
@@ -104,7 +93,6 @@ function Work() {
 
   return (
     <section id="work" className="relative mx-auto max-w-6xl px-6 py-24">
-      {/* super clean: kein SectionBG hier */}
       <div className="flex items-end justify-between gap-6">
         <div>
           <h2 className="text-4xl font-semibold tracking-tight text-zinc-700 text-white sm:text-5xl">
@@ -116,7 +104,6 @@ function Work() {
         </div>
       </div>
 
-      {/* Grid mit Linien */}
       <ul className="mt-10 grid grid-cols-1 border-t border-l border-gray-300 md:grid-cols-2">
         {items.map((it) => (
           <ShowcaseTile key={it.title} {...it} />

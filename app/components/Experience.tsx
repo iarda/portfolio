@@ -126,7 +126,6 @@ export function ExperienceSection() {
               backdrop-blur-sm transition-transform hover:-translate-y-0.5
             "
           >
-            {/* Media (optional) */}
             <div className="relative h-48 w-full overflow-hidden md:h-56">
               {e.poster ? (
                 <Image
@@ -146,11 +145,8 @@ export function ExperienceSection() {
                   }}
                 />
               )}
-              {/* sanfte Rounded oben */}
               <div className="pointer-events-none absolute inset-0 rounded-t-3xl ring-1 ring-inset ring-white/10" />
             </div>
-
-            {/* Content */}
             <div className="p-6">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <h3 className="text-xl font-semibold text-zink-500">

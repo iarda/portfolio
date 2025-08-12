@@ -4,7 +4,6 @@ import Image from "next/image";
 function AboutMe() {
   return (
     <section id="about" className="relative mx-auto max-w-6xl px-6 py-24">
-      {/* zarter Ambient‑Glow (optional, entferne div für 100% flat) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 opacity-[.14] blur-3xl"
@@ -15,7 +14,6 @@ function AboutMe() {
       />
 
       <div className="grid items-center gap-10 md:grid-cols-12">
-            {/* Text minimal */}
             <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -44,8 +42,6 @@ function AboutMe() {
                     Download CV
                     </a>
                 </div>
-                
-                {/* Value-Badges */}
                 <motion.ul
                     className="mt-5 flex flex-wrap gap-2"
                     aria-label="Fokusthemen"
@@ -58,7 +54,6 @@ function AboutMe() {
                 </motion.ul>
             </motion.div>
 
-            {/* Portrait groß, clean */}
             <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +62,6 @@ function AboutMe() {
             className="md:col-span-6"
             >
                 <div className="relative mx-auto aspect-[4/5] border-t border-l border-gray-300 w-full max-w-md overflow-hidden rounded-3xl">
-                    {/* ganz subtiler Halo */}
                     <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0 opacity-35 blur-2xl"

@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 type Props = {
-  onDone: () => void; // wird nach der Animation aufgerufen
+  onDone: () => void;
 };
 
 export default function PreLoader({ onDone }: Props) {
@@ -25,7 +25,6 @@ export default function PreLoader({ onDone }: Props) {
       const ctx = gsap.context(() => {
         const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
-        // Boxen Animation
         tl.to(boxesRef.current, {
           scale: 0,
           y: 60,
@@ -46,7 +45,6 @@ export default function PreLoader({ onDone }: Props) {
             },
           });
 
-        // Pulsierende "Loading" Animation
         gsap.to(textRef.current, {
           opacity: 0.4,
           repeat: -1,

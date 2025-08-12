@@ -13,7 +13,6 @@ function TechSection() {
       <h2 className="sr-only">Technologies</h2>
 
       <div className="grid grid-cols-1 border-t border-l border-gray-300 md:grid-cols-4">
-        {/* TITLE TILE (wie im Screenshot) */}
         <div className="relative flex min-h-[220px] flex-col justify-center gap-4 border-b border-r border-gray-300 p-8 md:col-span-1 md:row-span-2 md:min-h-[520px]">
           <div className="text-4xl font-semibold leading-tight text-zink-300 sm:text-5xl">
             <span style={{ color: "#97CBD1" }}>Tech</span> I work
@@ -23,25 +22,18 @@ function TechSection() {
             Tools, frameworks, and platforms I use to design, build, and deliver modern digital solutions.
           </p>
 
-          {/* subtiler Farb-Glow */}
           <span
             aria-hidden
             className="pointer-events-none absolute -z-10 inset-0 opacity-30 blur-2xl"
             style={{ background: `radial-gradient(40% 40% at 20% 20%, "#1e805422", transparent)` }}
           />
         </div>
-
-        {/* ERSTE REIHE – 3 Tiles */}
         {TECH.slice(0, 3).map((t) => (
           <TechTile key={t.name} {...t} />
         ))}
-
-        {/* ZWEITE REIHE – 4 Tiles */}
         {TECH.slice(3, 7).map((t) => (
           <TechTile key={t.name} {...t} />
         ))}
-
-        {/* DRITTE REIHE – 4 Tiles (oder kürzen, je nach Menge) */}
         {TECH.slice(7, 14).map((t) => (
           <TechTile key={t.name} {...t} />
         ))}
@@ -76,21 +68,17 @@ const TECH: Tech[] = [
 function TechTile({ name, Icon, subtitle }: Tech) {
   return (
     <div className="group relative flex aspect-square items-center justify-center overflow-hidden border-b border-r border-gray-300 p-6">
-      {/* Dot oben links */}
       <span
         aria-hidden
         className="absolute left-3 top-3 inline-block h-2 w-2 rounded-full ring-1 ring-gray-300"
         style={{ background: "#1e8054" }}
       />
-      {/* Content */}
       <div className="relative z-10 flex w-full max-w-[82%] flex-col items-start justify-end gap-2">
         <Icon className="h-10 w-10 text-zinc-600 opacity-90 transition group-hover:opacity-100" style={{ color: "#97CBD1" }} />
         <div className="text-xl font-semibold text-zinc-600">{name}</div>
         {subtitle && <div className="text-xs text-zinc-400">{subtitle}</div>}
       </div>
-      {/* Lesbarkeits-Gradient unten (sehr subtil) */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-gray-100/10 to-gray-200/80" />
-      {/* Hover-Kanten/Glow */}
       <span
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"

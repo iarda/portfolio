@@ -7,7 +7,6 @@ const Hero = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const reduceMotion = useReducedMotion();
 
-  // Autoplay-Fallback für iOS/Safari + Pause, wenn offscreen
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
@@ -16,7 +15,6 @@ const Hero = () => {
       try {
         await v.play();
       } catch {
-        // Falls Autoplay blockiert: leise starten, sobald geclickt wird
         const onUser = () => {
           v.play().catch(() => {});
           window.removeEventListener("pointerdown", onUser);
@@ -49,10 +47,9 @@ const Hero = () => {
             autoPlay
             loop
             preload="metadata"
-            poster="/hero-poster.jpg"      // lege ein Poster ins /public
+            poster="/hero-poster.jpg"
             aria-hidden="true"
         >
-            {/* H.264 MP4 + optional WebM für bessere Qualität/Dateigröße */}
             <source src="/hero-video.webm" type="video/webm" />
             <source src="/hero-video.mp4" type="video/mp4" />
         </video>

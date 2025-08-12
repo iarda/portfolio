@@ -1,8 +1,7 @@
-// app/layout.tsx  (SERVER)
 import type { Metadata, Viewport } from "next";
 import { Kanit } from "next/font/google";
 import "./globals.css";
-import ClientShell from "./ClientShell"; // gleich unten
+import ClientShell from "./ClientShell";
 
 const kanit = Kanit({ variable: "--font-rubik-sans", subsets: ["latin"], weight: ["300"] });
 
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
   description: "Built with passion.",
 };
 
-// optional, falls du viewport setzen willst
 export const viewport: Viewport = {
   themeColor: "#000000",
 };
