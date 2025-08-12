@@ -16,7 +16,7 @@ function Contact() {
             <a href="mailto:i-arda95@hotmail.de" className="inline-flex items-center rounded-full border border-[#97CBD1] bg-transparent px-7 py-3 text-base font-semibold text-zinc-800 shadow transition hover:bg-[#97CBD1] hover:text-white">
             <FaEnvelope className="mr-2" /> i-arda95@hotmail.de
             </a>
-            <a href="https://www.linkedin./in/ismail-arda/" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-[#97CBD1] bg-transparent px-7 py-3 text-base font-semibold text-zinc-800 shadow transition hover:bg-[#97CBD1] hover:text-white">
+            <a href="https://www.linkedin.com/in/ismail-arda/" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-[#97CBD1] bg-transparent px-7 py-3 text-base font-semibold text-zinc-800 shadow transition hover:bg-[#97CBD1] hover:text-white">
             <FaLinkedin className="mr-2" /> LinkedIn
             </a>
             <a href="https://github.com/iarda/" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-[#97CBD1] bg-transparent px-7 py-3 text-base font-semibold text-zinc-800 shadow transition hover:bg-[#97CBD1] hover:text-white">
